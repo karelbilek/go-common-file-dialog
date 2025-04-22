@@ -1,13 +1,15 @@
+//go:build windows
 // +build windows
 
 package cfd
 
 import (
 	"fmt"
-	"github.com/go-ole/go-ole"
 	"strings"
 	"syscall"
 	"unsafe"
+
+	"github.com/go-ole/go-ole"
 )
 
 func hresultToError(hr uintptr) error {
