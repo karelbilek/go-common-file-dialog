@@ -1,8 +1,9 @@
 package main
 
 import (
-	"github.com/harry1453/go-common-file-dialog/cfd"
 	"log"
+
+	"github.com/karelbilek/go-common-file-dialog/cfd"
 )
 
 func main() {

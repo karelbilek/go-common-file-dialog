@@ -1,11 +1,13 @@
+//go:build windows
 // +build windows
 
 package cfd
 
 import (
-	"github.com/go-ole/go-ole"
-	"github.com/harry1453/go-common-file-dialog/util"
 	"unsafe"
+
+	"github.com/go-ole/go-ole"
+	"github.com/karelbilek/go-common-file-dialog/util"
 )
 
 var (

@@ -8,7 +8,7 @@ import (
 	"unsafe"
 
 	"github.com/go-ole/go-ole"
-	"github.com/harry1453/go-common-file-dialog/util"
+	"github.com/karelbilek/go-common-file-dialog/util"
 )
 
 var (
