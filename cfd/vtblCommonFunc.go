@@ -142,13 +142,8 @@ func (vtbl *iFileDialogVtbl) setFolder(objPtr unsafe.Pointer, path string) error
 
 func (vtbl *iFileDialogVtbl) setTitle(objPtr unsafe.Pointer, title string) error {
 	titlePtr := ole.SysAllocString(title)
-<<<<<<< HEAD
 	defer ole.SysFreeString(titlePtr)
-	ret, _, _ := syscall.Syscall(vtbl.SetTitle,
-		1,
-=======
 	ret, _, _ := syscall.SyscallN(vtbl.SetTitle,
->>>>>>> kb/fix_syscalln
 		uintptr(objPtr),
 		uintptr(unsafe.Pointer(titlePtr)))
 	return hresultToError(ret)
@@ -192,13 +187,8 @@ func (vtbl *iFileDialogVtbl) setDefaultExtension(objPtr unsafe.Pointer, defaultE
 		defaultExtension = strings.TrimPrefix(defaultExtension, ".")
 	}
 	defaultExtensionPtr := ole.SysAllocString(defaultExtension)
-<<<<<<< HEAD
 	defer ole.SysFreeString(defaultExtensionPtr)
-	ret, _, _ := syscall.Syscall(vtbl.SetDefaultExtension,
-		1,
-=======
 	ret, _, _ := syscall.SyscallN(vtbl.SetDefaultExtension,
->>>>>>> kb/fix_syscalln
 		uintptr(objPtr),
 		uintptr(unsafe.Pointer(defaultExtensionPtr)))
 	return hresultToError(ret)
